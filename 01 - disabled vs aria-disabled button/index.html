@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>A11y - Disabled vs aria-disabled button</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dist/css/style.min.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <!--
+  Part of CSS-Tricks blogpost. Check footer for the link
+
+  Look for [DIFF] to know the difference between 2/3 and 3/3 versions.
+  Demo 2/3: https://codepen.io/sandrina-p/pen/NWdBYXL
+
+  Demo Extra: https://codepen.io/sandrina-p/pen/WNRYabB
+-->
+    <div class="g-hero">
+      <h1>Inclusive disabled buttons · Demo 3/3</h1>
+      <p class="about">
+        Disabled button using <code>aria-disabled</code> attribute and tooltip
+      </p>
+    </div>
+
+    <div class="demo g-block">
+      <form class="area js-form" novalidate>
+        <div class="areaStart">
+          <div class="field">
+            <label for="ticketCount" class="fieldLabel"
+              ><span class="sr-only">Number of</span> Tickets</label
+            >
+            <input
+              id="ticketCount"
+              class="fieldInput js-tickets"
+              type="text"
+              pattern="[0-9]+"
+              placeholder="0"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="areaEnd">
+          <div class="tooltipArea isActive js-tooltip">
+            <!-- [DIFF] - change attribute from disabled to aria-disabled -->
+            <button
+              type="submit"
+              class="btnSubmit js-btnSubmit"
+              aria-disabled="true"
+              aria-describedby="disabledReason"
+            >
+              <span class="btnSubmit-text">Add to cart</span>
+              <span
+                class="sr-only js-loadingMsg"
+                aria-live="assertive"
+                data-loading-msg="Adding to cart, wait..."
+              ></span>
+            </button>
+
+            <div role="tooltip" class="tooltipBox" id="disabledReason">
+              <span class="tooltipItself">Add between 1 and 9 tickets</span>
+            </div>
+          </div>
+          <p aria-live="assertive" class="formStatus js-feedback"></p>
+        </div>
+      </form>
+    </div>
+    <p class="terms">Some <a href="#" class="u-link">dummy terms</a> after.</p>
+
+    <!-- -->
+    <!-- -->
+    <!-- -->
+
+    <footer class="g-footer">
+      <p>
+        This is part of a
+        <a
+          href="https://css-tricks.com/making-disabled-buttons-more-inclusive"
+          class="u-link"
+          >blog post</a
+        >
+        on CSS-Tricks.
+      </p>
+      <p>
+        Made
+        <a href="https://www.buymeacoffee.com/sandrinap" class="u-link"
+          >without coffee</a
+        >
+        by
+        <a href="https://twitter.com/a_sandrina_p" class="u-link"
+          >Sandrina Pereira</a
+        >.
+      </p>
+    </footer>
+  </body>
+</html>
