@@ -1,0 +1,9 @@
+/* input[type="checkbox"] {
+  width: 0px;
+  height: 0px;
+  margin: 0px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip-path: rect(1px, 1px, 1px, 1px);
+} */

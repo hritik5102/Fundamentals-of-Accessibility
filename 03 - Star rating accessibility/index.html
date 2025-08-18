@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button onclick="alert(123)">normal-button</button>
+    <input type="radio" name="xyz" id="xyz" />
+    <label for="xyz">Mango</label>
+
+    <div class="star-rating">
+      <input type="checkbox" class="star" name="star" id="star-5" />
+      <label for="star-5">
+        <svg
+          class="ion-star hs-star-rating__icon hs-star-rating__inactive-icon hs-ion-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+          aria-hidden="true"
+          title="2 stars"
+          style="width: 28px; height: 28px"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linejoin="round"
+            stroke-width="32"
+            d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z"
+          ></path>
+        </svg>
+        <span class="hidden">1 star</span>
+      </label>
+
+      <input type="checkbox" class="star" name="star" id="star-4" />
+      <label for="star-4">
+        <span class="hidden">2 star</span>
+      </label>
+      <input type="checkbox" class="star" name="star" id="star-3" />
+      <label for="star-3">
+        <span class="hidden">3 star</span>
+      </label>
+      <input type="checkbox" class="star" name="star" id="star-2" />
+      <label for="star-2">
+        <span class="hidden">4 star</span>
+      </label>
+      <input type="checkbox" class="star" name="star" id="star-1" />
+      <label for="star-1">
+        <span class="hidden">5 star</span>
+      </label>
+    </div>
+  </body>
+</html>
